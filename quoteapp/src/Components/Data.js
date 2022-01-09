@@ -1,0 +1,22 @@
+export default [
+    {
+        id:1,
+        name:'Ke',
+        age:26
+    },
+    {
+        id:2,
+        name:'Ki',
+        age:25
+    },
+    {
+        id:3,
+        name:'Kis',
+        age:24
+    },
+       {
+        id:4,
+        name:'Kish',
+        age:23
+    }
+]
