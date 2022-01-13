@@ -1,14 +1,20 @@
 import React from "react";
-// import ReactSample from "./ReactSample";
-//import Simplecrm from "./Simplecrm";
-import Search from "./Components/Search";
+import './App.css';
+import Header from "./Components/Header";
+import Balance from "./Components/Balance";
+import IncomeExpenses from "./Components/IncomeExpenses";
+import TransactionList from "./Components/TransactionList";
+import AddTransaction from "./Components/AddTransaction";
+
 
 function App() {
   return (
     <div>
-      {/* <Simplecrm /> */}
-      {/* <ReactSample /> */}
-       <Search />
+      <Header />
+      <Balance />
+      <IncomeExpenses />
+      <TransactionList />
+      <AddTransaction />
     </div>
   );
 }
