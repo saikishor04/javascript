@@ -1,28 +1,35 @@
-import React , {useReducer} from 'react'
+import React ,{useReducer} from 'react'
 
-    const initialState = 0
-    const reducer = (state,action) =>{
-        switch(action){
-            case 'increment':
-                return state+1
-            case 'decrement':
-                return state-1
-            case 'reset':
-                return initialState
-            default:
-                return state
-        }
+const INCREMENT = 'increment'
+const DECREMENT = 'decrement'
+const RESET = 'reset'
+const initialState = 0
 
-    }
+function reducer(state,action){
+switch(action){
+    case INCREMENT : 
+    return state+1;
+    case DECREMENT:
+        return state-1;
+    case RESET:
+        return initialState;
+    default:
+        return state;
+}
+
+}
+
 function CounterUsereduce() {
-    const [count,dispatch]=useReducer(reducer,initialState)
+    const[state,dispatch] = useReducer(reducer,initialState)
     return (
-        <div>
-            <h2>Count : {count}</h2>
-            <button onClick={()=>dispatch('reset')}>Reset</button>
-            <button onClick={()=>dispatch('increment')}>Increment</button>
-            <button onClick={()=>dispatch('decrement')}>Decrement</button>
-        </div>
+        <>
+            <div className='count-info'>Count: {state}</div>
+            <div className='button'>
+            <button className='increment' onClick={()=> dispatch(INCREMENT)}>Increment</button>
+            <button className='decrement' onClick={()=> dispatch(DECREMENT)}>Decrement</button>
+            <button className='reset' onClick={()=> dispatch(RESET)}>Reset</button>
+            </div>
+        </>
     )
 }
 

@@ -1,14 +1,12 @@
 import './App.css';
-
-
-import SampleMessage from './Components/SampleMessage';
+import CounterUsereduce from './Components/CounterUsereduce';
 
 
 
 function App() {
   return (
     <div className="App">
-      <SampleMessage />
+      <CounterUsereduce />
     </div>
   );
 }
